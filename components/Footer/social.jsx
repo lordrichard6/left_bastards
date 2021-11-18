@@ -6,8 +6,6 @@ import { Colors, TitleSection } from "../../assets/variables";
 import {
   ImInstagram,
   ImFacebook2,
-  ImTwitter,
-  ImLinkedin,
   ImYoutube,
 } from "react-icons/im";
 import logo from "../../public/logo_black.png";
@@ -15,23 +13,15 @@ import logo from "../../public/logo_black.png";
 export default function Social() {
   const data = [
     {
-      href: "https://www.instagram.com/patriciavilanova93/",
+      href: "/",
       icon: <ImInstagram />,
     },
     {
-      href: "https://www.facebook.com//vilanova.patricia/",
+      href: "/",
       icon: <ImFacebook2 />,
     },
     {
-      href: "https://twitter.com/patriciavilano5/",
-      icon: <ImTwitter />,
-    },
-    {
-      href: "https://www.linkedin.com/in/patr%C3%ADcia-vila-nova-b22200b5/",
-      icon: <ImLinkedin />,
-    },
-    {
-      href: "https://www.youtube.com/channel/UC9SSRSUEyefD6K3lKpsBWpA",
+      href: "/",
       icon: <ImYoutube />,
     },
   ];
@@ -49,7 +39,7 @@ export default function Social() {
         })}
       </IconWrapper>
       <LogoContainer>
-        <Image src={logo} alt="logo patricia vila nova" />
+        <Image src={logo} alt="logo left bastards" />
       </LogoContainer>
     </FooterSection>
   );
@@ -71,7 +61,7 @@ const FooterSection = styled.div`
   }
 `;
 const IconWrapper = styled.div`
-  color: ${Colors.white};
+  color: ${Colors.secundary};
   font-size: 2.2rem;
 
   @media screen and (${breakpoint.device.tablet}) {
@@ -81,7 +71,7 @@ const IconWrapper = styled.div`
   a {
     margin: 0 1rem;
     &:hover {
-      color: ${Colors.secondary};
+      color: ${Colors.white};
       transition: 0.2s ease-in-out;
     }
   }
@@ -91,15 +81,15 @@ const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100px;
-  height: 100px;
+  height: 90px;
   margin-top: 1rem;
 
   @media screen and (${breakpoint.device.mobile}) {
     width: 150px;
-    height: 150px;
+    height: 130px;
   }
   @media screen and (${breakpoint.device.desktop}) {
     width: 200px;
-    height: 200px;
+    height: 170px;
   }
 `;

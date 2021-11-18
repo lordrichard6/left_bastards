@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 import breakpoint from "../../../assets/variables/breakpoints";
-import background from '../../../public/images/header_01.jpg'
+import background from '../../../public/images/header.jpg'
 
 export default function Header() {
     return (

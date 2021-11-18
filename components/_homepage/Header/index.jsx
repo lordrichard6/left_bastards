@@ -15,7 +15,7 @@ export default function Header() {
                 alt='header'
                 priority
             />
-            <Slogan>"Always on the left"</Slogan>
+            <Slogan>Always on the left</Slogan>
             <TitleExtra>LEFT BASTARDS</TitleExtra>
         </SectionContainer>
     )

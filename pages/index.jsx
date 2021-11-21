@@ -8,6 +8,7 @@ import Sidebar from "../components/Navbar/sideBar";
 import Header from "../components/_homepage/Header";
 import AboutUs from "../components/_homepage/AboutUs";
 import Gallery from "../components/_homepage/Gallery";
+import Videos from "../components/_homepage/Videos";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +29,7 @@ export default function Home() {
       <Header />
       <AboutUs />
       <Gallery />
+      <Videos />
       <Footer />
     </MainContainer>
   );

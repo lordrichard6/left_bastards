@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import breakpoint from "../../assets/variables/breakpoints";
-import { Colors, TitleSection } from "../../assets/variables";
+import { Colors, TitleFooter } from "../../assets/variables";
 import { ImInstagram, ImFacebook2, ImYoutube } from "react-icons/im";
 import logo from "../../public/logo_black.png";
 
@@ -24,7 +23,7 @@ export default function Social() {
 
   return (
     <FooterSection>
-      <TitleSection className="margin">Social</TitleSection>
+      <TitleFooter color={Colors.secondary} className="margin">Social</TitleFooter>
       <IconWrapper>
         {data.map((item, i) => {
           return (
@@ -42,7 +41,7 @@ export default function Social() {
 }
 
 const FooterSection = styled.div`
-  width: 100%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,23 +51,30 @@ const FooterSection = styled.div`
     margin-bottom: 1rem;
   }
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     margin: 1rem 0;
   }
 `;
 const IconWrapper = styled.div`
-  color: ${Colors.secundary};
+  color: ${Colors.secondary};
   font-size: 2.2rem;
 
-  @media screen and (${breakpoint.device.tablet}) {
+  @media screen and (max-width: 1024px) {
     display: flex;
     justify-content: center;
   }
   a {
     margin: 0 1rem;
-    &:hover {
-      color: ${Colors.white};
-      transition: 0.2s ease-in-out;
+    svg {
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: ${Colors.white};
+        transform: scale(1.05) translateY(-0.5rem);
+        box-shadow: 0 2.5rem 4rem rgba(${Colors.dark}, 0.5);
+        z-index: 20;
+      }
     }
   }
 `;
@@ -80,11 +86,11 @@ const LogoContainer = styled.div`
   height: 90px;
   margin-top: 1rem;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     width: 150px;
     height: 130px;
   }
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     width: 200px;
     height: 170px;
   }

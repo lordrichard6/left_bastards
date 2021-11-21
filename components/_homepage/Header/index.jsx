@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import breakpoint from "../../../assets/variables/breakpoints";
 
 export default function Header() {
   return (
@@ -38,12 +37,12 @@ const TitleExtra = styled.h1`
   letter-spacing: 0.2em;
   margin: 0;
 
-  @media only screen and (${breakpoint.device.mobile}) {
+  @media only screen and (max-width: 768px) {
     font-size: 4rem;
     letter-spacing: 0;
     text-align: center;
   }
-  @media only screen and (${breakpoint.device.desktop}) {
+  @media only screen and (min-width: 2024px) {
     font-size: 8rem;
     letter-spacing: 0.3em;
   }
@@ -60,12 +59,12 @@ const Slogan = styled.h2`
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 
-  @media only screen and (${breakpoint.device.mobile}) {
+  @media only screen and (max-width: 768px) {
     text-align: center;
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
-  @media only screen and (${breakpoint.device.desktop}) {
+  @media only screen and (min-width: 2024px) {
     font-size: 3rem;
     text-align: center;
   }

@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
-import breakpoint from "../../assets/variables/breakpoints";
 import { Colors, TextSmall } from "../../assets/variables";
 
 // import Contact from "./contact";
 import Social from "./social";
-// import Sitemap from "./sitemap";
+import Sitemap from "./siteMap";
+import Contact from "./contact";
 
 export default function Footer() {
   return (
     <SectionContainer>
       <InnerContainer>
         <GroupContainer>
-          {/* <Contact /> */}
+          <Sitemap />
           <Social />
-          {/* <Sitemap /> */}
+          <Contact />
         </GroupContainer>
         <Copyright>
           <TextSmall>
@@ -38,6 +38,7 @@ const SectionContainer = styled.footer`
   align-items: center;
   background: ${Colors.primary};
   color: ${Colors.secondary};
+  font-family: Poppins;
 `;
 
 const InnerContainer = styled.div`
@@ -47,7 +48,7 @@ const InnerContainer = styled.div`
   flex-direction: column;
   z-index: 1;
 
-  @media screen and (${breakpoint.device.desktop}) {
+  @media screen and (min-width: 2024px) {
     width: 60vw;
   }
 `;
@@ -61,7 +62,7 @@ const GroupContainer = styled.div`
   align-items: flex-start;
   margin-bottom: 1rem;
 
-  @media screen and (${breakpoint.device.mobile}) {
+  @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
   }
 `;

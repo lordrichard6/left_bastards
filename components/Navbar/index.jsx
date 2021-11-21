@@ -7,7 +7,7 @@ import NavItems from './navItems'
 
 export default function Navbar({toggle}) {
     return (
-        <Nav>
+        <Nav id='top'>
             <NavbarWrapper>
                 <Logo />
                 <MobileIcon onClick={toggle}>

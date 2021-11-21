@@ -3,11 +3,7 @@ import Image from "next/image";
 
 import breakpoint from "../../assets/variables/breakpoints";
 import { Colors, TitleSection } from "../../assets/variables";
-import {
-  ImInstagram,
-  ImFacebook2,
-  ImYoutube,
-} from "react-icons/im";
+import { ImInstagram, ImFacebook2, ImYoutube } from "react-icons/im";
 import logo from "../../public/logo_black.png";
 
 export default function Social() {

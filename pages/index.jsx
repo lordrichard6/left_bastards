@@ -1,14 +1,15 @@
-import Head from 'next/head'
-import styled from 'styled-components'
+import Head from "next/head";
+import styled from "styled-components";
 import React, { useState } from "react";
 
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Sidebar from "../components/Navbar/sideBar";
-import Header from '../components/_homepage/Header'
+import Header from "../components/_homepage/Header";
+import AboutUs from "../components/_homepage/AboutUs";
+import Gallery from "../components/_homepage/Gallery";
 
-
-export default function Home()  {
+export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -25,10 +26,11 @@ export default function Home()  {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Header />
-
+      <AboutUs />
+      <Gallery />
       <Footer />
     </MainContainer>
-  )
+  );
 }
 
 const MainContainer = styled.div`
@@ -37,4 +39,4 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;

@@ -24,45 +24,44 @@ export default function Right() {
     },
   ];
   return (
-        <RightContainer>
-          <TitleWrapper>
-            <h1>A</h1>
-            <h1>B</h1>
-            <h1>O</h1>
-            <h1>U</h1>
-            <h1>T</h1>
-            <h1>U</h1>
-            <h1>S</h1>
-            <h1>.</h1>
-          </TitleWrapper>
-          <TextWrapper>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Ullamcorper sed duis tristique mattis mauris, vitae non
-              adipiscing. Faucibus sem rhoncus amet aliquet feugiat. Et
-              tincidunt molestie turpis ac sed.{" "}
-            </p>
-            <br />
-            <p>
-              Tortor nulla tincidunt ultricies bibendum sit pulvinar eu congue.
-              Aliquet elementum adipiscing dui porttitor varius. Ligula lacus,
-              commodo cursus a, ornare cursus ultricies faucibus. In non laoreet
-              tempor tellus, semper in. Nibh sem blandit ut dolor turpis tempor
-              quam quam felis.{" "}
-            </p>
-            <br />
-            <p>Gravida tellus, ac nunc accumsan dolor sit ultricies.</p>
-          </TextWrapper>
-          <IconWrapper>
-            {data.map((item, i) => {
-              return (
-                <Link key={i} href={item.link}>
-                  {item.icon}
-                </Link>
-              );
-            })}
-          </IconWrapper>
-        </RightContainer>
+    <RightContainer>
+      <TitleWrapper>
+        <h1>A</h1>
+        <h1>B</h1>
+        <h1>O</h1>
+        <h1>U</h1>
+        <h1>T</h1>
+        <h1>U</h1>
+        <h1>S</h1>
+        <h1>.</h1>
+      </TitleWrapper>
+      <TextWrapper>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper
+          sed duis tristique mattis mauris, vitae non adipiscing. Faucibus sem
+          rhoncus amet aliquet feugiat. Et tincidunt molestie turpis ac sed.{" "}
+        </p>
+        <br />
+        <p>
+          Tortor nulla tincidunt ultricies bibendum sit pulvinar eu congue.
+          Aliquet elementum adipiscing dui porttitor varius. Ligula lacus,
+          commodo cursus a, ornare cursus ultricies faucibus. In non laoreet
+          tempor tellus, semper in. Nibh sem blandit ut dolor turpis tempor quam
+          quam felis.{" "}
+        </p>
+        <br />
+        <p>Gravida tellus, ac nunc accumsan dolor sit ultricies.</p>
+      </TextWrapper>
+      <IconWrapper>
+        {data.map((item, i) => {
+          return (
+            <Link key={i} href={item.link}>
+              {item.icon}
+            </Link>
+          );
+        })}
+      </IconWrapper>
+    </RightContainer>
   );
 }
 
@@ -76,6 +75,12 @@ const RightContainer = styled.div`
   padding-right: 2rem;
   padding-top: 6rem;
   padding-bottom: 6rem;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -83,12 +88,21 @@ const TitleWrapper = styled.div`
   display: flex;
   flex-direction: row;
 
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+
   h1 {
     font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: 4px;
     margin-bottom: 1rem;
     /* border-bottom: 2px solid ${Colors.primary}; */
+
+    @media only screen and (min-width: 2024px) {
+      font-size: 3rem;
+      font-weight: 500;
+    }
 
     &:nth-child(5) {
       margin-right: 1rem;
@@ -103,6 +117,12 @@ const TitleWrapper = styled.div`
 
 const TextWrapper = styled.div`
   width: 80%;
+
+  @media only screen and (min-width: 2024px) {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-right: 20%;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -110,6 +130,11 @@ const IconWrapper = styled.div`
   color: ${Colors.primary};
   font-size: 4rem;
   margin: 2rem 0;
+
+  @media only screen and (min-width: 2024px) {
+    font-size: 5rem;
+  }
+
   svg {
     transition: 0.3s ease-in-out;
     cursor: pointer;

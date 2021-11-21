@@ -43,13 +43,17 @@ const SectionContainer = styled.footer`
 
 const InnerContainer = styled.div`
   height: 100%;
-  width: 80vw;
+  width: 80%;
   display: flex;
   flex-direction: column;
   z-index: 1;
 
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+  }
+
   @media screen and (min-width: 2024px) {
-    width: 60vw;
+    width: 60%;
   }
 `;
 
@@ -68,7 +72,7 @@ const GroupContainer = styled.div`
 `;
 
 const Copyright = styled.div`
-  border-top: 1px solid ;
+  /* border-top: 1px solid ; */
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;

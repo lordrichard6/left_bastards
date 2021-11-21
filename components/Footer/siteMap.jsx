@@ -39,15 +39,22 @@ const FooterSection = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: 390px) {
-    order: 1;
+  @media screen and (max-width: 764px) {
+    width: 100%;
+    order: 3;
     margin-top: 1rem;
   }
+
   h3 {
     font-weight: 400;
     margin: 0.4rem 0;
     cursor: pointer;
     letter-spacing: 2px;
+
+    @media only screen and (min-width: 2024px) {
+      font-size: 1.6rem;
+    }
+
     &:hover {
       color: ${Colors.white};
       transition: 0.3s ease-in-out;

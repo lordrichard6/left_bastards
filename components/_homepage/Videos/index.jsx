@@ -72,6 +72,11 @@ const TitleWrapper = styled.div`
     letter-spacing: 4px;
     margin-bottom: 1rem;
 
+    @media only screen and (min-width: 2024px) {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+
     &:nth-child(3),
     &:nth-child(7) {
       color: ${Colors.primary};
@@ -83,12 +88,27 @@ const TextWrapper = styled.div`
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
+
+  @media only screen and (min-width: 2024px) {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
 `;
 
 const VideoWrapper = styled.div`
   display: flex;
   width: 80%;
   height: 30rem;
+
+  @media only screen and (max-width: 764px) {
+    width: 100%;
+    height: 20rem;
+  }
+
+  @media only screen and (min-width: 2024px) {
+    width: 60%;
+    height: 50rem;
+  }
 `;
 
 const Subscribe = styled.div`
@@ -97,9 +117,19 @@ const Subscribe = styled.div`
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
+
+  @media only screen and (max-width: 764px) {
+    flex-direction: column;
+  }
+
   p {
     letter-spacing: 2px;
     font-size: 1.5rem;
+
+    @media only screen and (min-width: 2024px) {
+      font-size: 2rem;
+    }
+
     &:nth-child(2) {
       color: ${Colors.primary};
       text-transform: uppercase;
@@ -117,6 +147,10 @@ const Subscribe = styled.div`
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(${Colors.dark}, 0.5);
       z-index: 20;
+    }
+
+    @media only screen and (min-width: 2024px) {
+      font-size: 3rem;
     }
   }
 `;

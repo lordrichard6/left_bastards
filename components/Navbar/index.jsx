@@ -34,6 +34,9 @@ const NavbarWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  @media only screen and (min-width: 2024px) {
+    width: 60%;
+  }
 `;
 
 const MobileIcon = styled.div`

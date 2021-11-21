@@ -13,4 +13,8 @@ const LeftContainer = styled.div`
     url("/images/header.jpg");
   background-position: center;
   background-size: cover;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;

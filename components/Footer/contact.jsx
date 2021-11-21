@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import { Colors, TitleFooter } from "../../assets/variables";
-import { ImInstagram, ImFacebook2, ImYoutube } from "react-icons/im";
 import QR from "../../public/Ficheiro_000.png";
 
 export default function Contact() {
@@ -24,6 +23,11 @@ const FooterSection = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media only screen and (max-width: 764px) {
+    order: 1;
+    width: 100%;
+  }
+
   .margin {
     margin-bottom: 1rem;
   }
@@ -41,11 +45,11 @@ const QRWrapper = styled.div`
   margin-top: 1rem;
 
   @media screen and (max-width: 768px) {
-    width: 150px;
-    height: 130px;
+    width: 200px;
+    height: 200px;
   }
   @media screen and (min-width: 2024px) {
     width: 200px;
-    height: 170px;
+    height: 200px;
   }
 `;

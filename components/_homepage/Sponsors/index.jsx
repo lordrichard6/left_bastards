@@ -81,6 +81,10 @@ const InnerContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (min-width: 2024px) {
+    width: 60%;
+  }
 `;
 
 const TitleWrapper = styled.div`
@@ -92,6 +96,11 @@ const TitleWrapper = styled.div`
     font-weight: 400;
     letter-spacing: 4px;
     margin-bottom: 1rem;
+
+    @media only screen and (min-width: 2024px) {
+      font-size: 3rem;
+      font-weight: 500;
+    }
 
     &:nth-child(3),
     &:nth-child(6),
@@ -109,12 +118,24 @@ const TextWrapper = styled.div`
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
+
+
+  @media only screen and (min-width: 2024px) {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
 `;
 
 const SponsorsWrapper = styled.div`
   width: 80%;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 764px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Sponsor = styled.div`
@@ -122,6 +143,14 @@ const Sponsor = styled.div`
   height: auto;
   transition: 0.3s ease-in-out;
   cursor: pointer;
+
+  @media only screen and (max-width: 764px) {
+    margin:1rem 0;
+  }
+
+  @media only screen and (min-width: 2024px) {
+    width: 15rem;
+  }
 
   &:hover {
     transform: scale(1.05) translateY(-0.5rem);

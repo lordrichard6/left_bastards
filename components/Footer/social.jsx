@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import { Colors, TitleFooter } from "../../assets/variables";
-import { ImInstagram, ImFacebook2, ImYoutube } from "react-icons/im";
+import { ImInstagram, ImFacebook2 } from "react-icons/im";
+import { FaYoutubeSquare } from "react-icons/fa";
 import logo from "../../public/logo_black.png";
 
 export default function Social() {
@@ -17,13 +18,15 @@ export default function Social() {
     },
     {
       href: "/",
-      icon: <ImYoutube />,
+      icon: <FaYoutubeSquare />,
     },
   ];
 
   return (
     <FooterSection>
-      <TitleFooter color={Colors.secondary} className="margin">Social</TitleFooter>
+      <TitleFooter color={Colors.secondary} className="margin">
+        Social
+      </TitleFooter>
       <IconWrapper>
         {data.map((item, i) => {
           return (
@@ -47,6 +50,11 @@ const FooterSection = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 768px) {
+    order: 2;
+    width: 100%;
+  }
+
   .margin {
     margin-bottom: 1rem;
   }
@@ -63,6 +71,11 @@ const IconWrapper = styled.div`
     display: flex;
     justify-content: center;
   }
+
+  @media only screen and (min-width: 2024px) {
+    font-size: 2.8rem;
+  }
+
   a {
     margin: 0 1rem;
     svg {

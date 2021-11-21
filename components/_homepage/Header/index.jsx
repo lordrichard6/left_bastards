@@ -26,7 +26,12 @@ const SectionContainer = styled.div`
     url("/images/header.jpg");
   background-position: center;
   background-size: cover;
+
+  @media only screen and (max-width: 768px) {
+    height: 50rem;
+  }
 `;
+
 const TitleExtra = styled.h1`
   color: #caa82f;
   font-size: 6rem;

@@ -1,59 +1,23 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-import { TiSocialYoutubeCircular } from "react-icons/ti";
-import { RiInstagramFill, RiFacebookBoxLine } from "react-icons/ri";
 import { Colors } from "../../../assets/variables";
+import { social, about } from "../../../assets/data/home";
+import { TitleSection, TextNormal } from "../../../assets/variables/typography";
 
 export default function Right() {
-  const data = [
-    {
-      link: "/",
-      icon: <TiSocialYoutubeCircular />,
-      alt: "",
-    },
-    {
-      link: "/",
-      icon: <RiInstagramFill />,
-      alt: "",
-    },
-    {
-      link: "/",
-      icon: <RiFacebookBoxLine />,
-      alt: "",
-    },
-  ];
   return (
     <RightContainer>
-      <TitleWrapper>
-        <h1>A</h1>
-        <h1>B</h1>
-        <h1>O</h1>
-        <h1>U</h1>
-        <h1>T</h1>
-        <h1>U</h1>
-        <h1>S</h1>
-        <h1>.</h1>
-      </TitleWrapper>
+      <TitleSectionAlt>
+        {about.title.split("").map((item, i) => {
+          return <h1 key={i}>{item}</h1>;
+        })}
+      </TitleSectionAlt>
       <TextWrapper>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper
-          sed duis tristique mattis mauris, vitae non adipiscing. Faucibus sem
-          rhoncus amet aliquet feugiat. Et tincidunt molestie turpis ac sed.{" "}
-        </p>
-        <br />
-        <p>
-          Tortor nulla tincidunt ultricies bibendum sit pulvinar eu congue.
-          Aliquet elementum adipiscing dui porttitor varius. Ligula lacus,
-          commodo cursus a, ornare cursus ultricies faucibus. In non laoreet
-          tempor tellus, semper in. Nibh sem blandit ut dolor turpis tempor quam
-          quam felis.{" "}
-        </p>
-        <br />
-        <p>Gravida tellus, ac nunc accumsan dolor sit ultricies.</p>
+        <TextNormal>{about.text}</TextNormal>
       </TextWrapper>
       <IconWrapper>
-        {data.map((item, i) => {
+        {social.map((item, i) => {
           return (
             <Link key={i} href={item.link}>
               {item.icon}
@@ -83,27 +47,14 @@ const RightContainer = styled.div`
   }
 `;
 
-const TitleWrapper = styled.div`
+const TitleSectionAlt = styled(TitleSection)`
   width: 80%;
-  display: flex;
-  flex-direction: row;
 
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
 
   h1 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    letter-spacing: 4px;
-    margin-bottom: 1rem;
-    /* border-bottom: 2px solid ${Colors.primary}; */
-
-    @media only screen and (min-width: 2024px) {
-      font-size: 3rem;
-      font-weight: 500;
-    }
-
     &:nth-child(5) {
       margin-right: 1rem;
     }
@@ -119,8 +70,6 @@ const TextWrapper = styled.div`
   width: 80%;
 
   @media only screen and (min-width: 2024px) {
-    font-size: 1.5rem;
-    font-weight: 400;
     padding-right: 20%;
   }
 `;

@@ -22,6 +22,7 @@ const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   h1 {
     color: ${Colors.secondary};
     font-size: 2.2rem;

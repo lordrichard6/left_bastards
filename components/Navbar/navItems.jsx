@@ -2,21 +2,12 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import { Colors } from "../../assets/variables";
+import { items } from "../../assets/data/navbar";
 
 export default function NavItems() {
-  const data = [
-    {
-      href: "/",
-      name: "home",
-    },
-    {
-      href: "/team",
-      name: "team",
-    },
-  ];
   return (
     <NavMenu>
-      {data.map((item, i) => {
+      {items.map((item, i) => {
         return (
           <NavItem key={i}>
             <Link href={item.href}>

@@ -3,33 +3,46 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { BsYoutube } from "react-icons/bs";
-import picture from "../../../public/images/header.jpg";
 import { Colors } from "../../../assets/variables";
+import { TitleSection, TextNormal } from "../../../assets/variables/typography";
 
 export default function Videos() {
+  const data = {
+    title: "videos.",
+    quote: "Lorme tellus, ac nunc accumsan dolor sit ultricies.",
+    text_01: "Subscribe us on",
+    text_02: "youtube",
+    YTlink: "http://youtube.com",
+    icon: <BsYoutube />,
+  };
+
   return (
     <SectionContainer>
       <InnerContainer>
-        <TitleWrapper>
-          <h1>V</h1>
-          <h1>I</h1>
-          <h1>D</h1>
-          <h1>E</h1>
-          <h1>O</h1>
-          <h1>S</h1>
-          <h1>.</h1>
-        </TitleWrapper>
+        <TitleSectionAlt>
+          {data.title.split("").map((item, i) => {
+            return <h1 key={i}>{item}</h1>;
+          })}
+        </TitleSectionAlt>
         <TextWrapper>
-          <p>Lorme tellus, ac nunc accumsan dolor sit ultricies.</p>
+          <TextNormal>{data.quote}</TextNormal>
         </TextWrapper>
         <VideoWrapper>
-          <Image src={picture} alt="" objectFit="cover" />
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/woVBQSJ28Y4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </VideoWrapper>
         <Subscribe>
-          <p>Subscribe us on</p>
-          <p>youtube</p>
-          <Link href="http://youtube.com" target="_blank">
-            <BsYoutube />
+          <p>{data.text_01}</p>
+          <p>{data.text_02}</p>
+          <Link href={data.YTlink} target="_blank">
+            {data.icon}
           </Link>
         </Subscribe>
       </InnerContainer>
@@ -62,21 +75,8 @@ const InnerContainer = styled.div`
   align-items: center;
 `;
 
-const TitleWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-
+const TitleSectionAlt = styled(TitleSection)`
   h1 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    letter-spacing: 4px;
-    margin-bottom: 1rem;
-
-    @media only screen and (min-width: 2024px) {
-      font-size: 3rem;
-      font-weight: 500;
-    }
-
     &:nth-child(3),
     &:nth-child(7) {
       color: ${Colors.primary};
@@ -88,21 +88,19 @@ const TextWrapper = styled.div`
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
-
-  @media only screen and (min-width: 2024px) {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
 `;
 
 const VideoWrapper = styled.div`
   display: flex;
   width: 80%;
-  height: 30rem;
+  height: 35rem;
 
   @media only screen and (max-width: 764px) {
+    height: 25rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
     width: 100%;
-    height: 20rem;
   }
 
   @media only screen and (min-width: 2024px) {

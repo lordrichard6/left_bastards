@@ -11,8 +11,8 @@ export default function SiteMap() {
       item: "Home",
     },
     {
-      href: "/",
-      item: "Members",
+      href: "/team",
+      item: "Team",
     },
   ];
 

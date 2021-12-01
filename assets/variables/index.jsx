@@ -1,31 +1,11 @@
 import styled from "styled-components";
 
 export const Colors = {
-    primary: '#caa82f',
-    secondary: '#1d2124',
-    white:'#fff'
-}
-
-export const TitleBig = styled.h1`
-  z-index: 10;
-  font-size: 64px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: ${Colors.white};
-  text-shadow: ${Colors.dark} 1px 0 10px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 48px;
-    text-align: center;
-    line-height: 46px;
-  }
-  @media screen and (min-width: 2024px) {
-    font-size: 72px;
-    letter-spacing: 4px;
-  }
-`;
+  primary: "#caa82f",
+  secondary: "#1d2124",
+  white: "#fff",
+  dark: "#1d2124",
+};
 
 export const TitleMain = styled.h1`
   font-size: 48px;
@@ -107,21 +87,25 @@ export const TextSmall = styled.p`
   }
 `;
 
-export const SectionContainer = styled.section`
+export const SectionContainer = styled.div`
   position: relative;
+  height: 100vh;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0;
+  background: linear-gradient(
+      0deg,
+      rgba(29, 33, 36, 0.6),
+      rgba(29, 33, 36, 0.6)
+    ),
+    url(${(props) => props.image});
+  background-position: center;
+  background-size: cover;
 
-  @media screen and (max-width: 1024px) {
-    margin: 2rem 0;
-  }
-  @media screen and (min-width: 2024px) {
-    margin: 8rem 0;
+  @media only screen and (max-width: 768px) {
+    height: 50rem;
   }
 `;
 

@@ -1,29 +1,15 @@
 import styled from "styled-components";
-// import Image from "next/image";
 import Link from "next/link";
 
-// import { FaTimes } from "react-icons/fa";
 import { Colors } from "../../assets/variables";
+import { items } from "../../assets/data/navbar";
 
 export default function Sidebar({ isOpen, toggle }) {
-  const data = [
-    {
-      href: "/",
-      name: "home",
-    },
-    {
-      href: "/team",
-      name: "team",
-    },
-  ];
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
-      {/* <Icon onClick={toggle}>
-          <CloseIcon />
-        </Icon> */}
       <SidebarWrapper>
         <SidebarMenu>
-          {data.map((item, i) => {
+          {items.map((item, i) => {
             return (
               <NavItem key={i} onClick={toggle}>
                 <Link href={item.href}>

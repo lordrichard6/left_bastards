@@ -1,56 +1,24 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Link from "next/link";
 
-import logo from "../../../public/logo_gold.png";
 import { Colors } from "../../../assets/variables";
+import { sponsors, sponsorTitle } from "../../../assets/data/home";
+import { TitleSection, TextNormal } from "../../../assets/variables/typography";
 
 export default function Sponsors() {
-  const data = [
-    {
-      imgSrc: logo,
-      alt: "",
-      link: "",
-    },
-    {
-      imgSrc: logo,
-      alt: "",
-      link: "",
-    },
-    {
-      imgSrc: logo,
-      alt: "",
-      link: "",
-    },
-    {
-      imgSrc: logo,
-      alt: "",
-      link: "",
-    },
-  ];
-
   return (
     <SectionContainer>
       <InnerContainer>
-        <TitleWrapper>
-          <h1>O</h1>
-          <h1>U</h1>
-          <h1>R</h1>
-          <h1>S</h1>
-          <h1>P</h1>
-          <h1>O</h1>
-          <h1>N</h1>
-          <h1>S</h1>
-          <h1>O</h1>
-          <h1>R</h1>
-          <h1>S</h1>
-          <h1>.</h1>
-        </TitleWrapper>
+        <TitleSectionAlt>
+          {sponsorTitle.title.split("").map((item, i) => {
+            return <h1 key={i}>{item}</h1>;
+          })}
+        </TitleSectionAlt>
         <TextWrapper>
-          <p>Lorme tellus, ac nunc accumsan dolor sit ultricies.</p>
+          <TextNormal>{sponsorTitle.quote}</TextNormal>
         </TextWrapper>
         <SponsorsWrapper>
-          {data.map((item, i) => {
+          {sponsors.map((item, i) => {
             return (
               <Sponsor key={i}>
                 <Image src={item.imgSrc} alt={item.alt} objectFit="cover" />
@@ -87,21 +55,8 @@ const InnerContainer = styled.div`
   }
 `;
 
-const TitleWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-
+const TitleSectionAlt = styled(TitleSection)`
   h1 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    letter-spacing: 4px;
-    margin-bottom: 1rem;
-
-    @media only screen and (min-width: 2024px) {
-      font-size: 3rem;
-      font-weight: 500;
-    }
-
     &:nth-child(3),
     &:nth-child(6),
     &:nth-child(9),
@@ -118,7 +73,6 @@ const TextWrapper = styled.div`
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
-
 
   @media only screen and (min-width: 2024px) {
     font-size: 1.5rem;
@@ -145,7 +99,7 @@ const Sponsor = styled.div`
   cursor: pointer;
 
   @media only screen and (max-width: 764px) {
-    margin:1rem 0;
+    margin: 1rem 0;
   }
 
   @media only screen and (min-width: 2024px) {

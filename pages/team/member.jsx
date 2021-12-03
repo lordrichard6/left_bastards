@@ -1,7 +1,10 @@
+import Layout from "../../components/Layout";
+import Header from "../../components/_singleMember/Header";
+
 export default function SingleMember() {
-    return (
-        <div>
-            <h1>hello</h1>
-        </div>
-    )
+  return (
+    <Layout>
+      <Header />
+    </Layout>
+  );
 }

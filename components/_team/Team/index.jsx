@@ -9,8 +9,8 @@ export default function Team() {
     <SectionContainer>
       <InnerContainer>
         <TitleWrapper>
-          {page.title.split("").map((item) => {
-            return <h1>{item}</h1>;
+          {page.title.split("").map((item, i) => {
+            return <h1 key={i}>{item}</h1>;
           })}
         </TitleWrapper>
         <TextWrapper>

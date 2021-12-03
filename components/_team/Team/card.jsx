@@ -84,6 +84,6 @@ const ImageWrapper = styled.div`
   transition: 0.3s ease-in-out;
 
   @media screen and (max-width: 1024px) {
-      opacity: 0.8;
-    }
+    opacity: 0.8;
+  }
 `;

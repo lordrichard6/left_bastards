@@ -1,5 +1,9 @@
-import pic from "../../public/images/boss_01.jpg";
+import boss_01 from "../../public/images/boss_03.jpg";
+import goncalo_01 from "../../public/images/goncalo_01.jpg";
+import pedro_01 from "../../public/images/pedro_01.jpg";
+import unknown from "../../public/images/unknown.jpg";
 import logo_gold from "../../public/logo_gold.png";
+import header01 from '../../public/images/home_04.jpg'
 
 export const header = {
   title: 'team',
@@ -20,77 +24,80 @@ export const page = {
 
 export const founders = [
   {
-    name: "John Doe",
-    imgSrc: pic,
-    imgAlt: "",
+    name: "Paulo Reizinho",
+    imgSrc: boss_01,
+    imgAlt: "paulo reizinho",
+    carImg: '/images/home_04.jpg',
     link: "/team/member",
   },
   {
-    name: "John Doe",
-    imgSrc: pic,
-    imgAlt: "",
+    name: "Gonçalo Pinto",
+    imgSrc: goncalo_01,
+    imgAlt: "gonçalo pinto",
+    carImg: header01,
     link: "/team/member",
   },
   {
-    name: "John Doe",
-    imgSrc: pic,
-    imgAlt: "",
+    name: "Pedro Ribeiro",
+    imgSrc: pedro_01,
+    imgAlt: "pedro ribeiro",
+    carImg: header01,
     link: "/team/member",
   },
 ];
 
 export const members = [
   {
-    name: "John Doe",
-    imgSrc: pic,
+    name: "Desconhecido",
+    imgSrc: unknown,
+    imgAlt: "",
+    link: "/team/member",
+  },
+  {
+    name: "Desconhecido",
+    imgSrc: unknown,
+    imgAlt: "",
+    link: "/team/member",
+  },
+  {
+    name: "Desconhecido",
+    imgSrc: unknown,
+    imgAlt: "",
+    link: "/team/member",
+  },
+  {
+    name: "Desconhecido",
+    imgSrc: unknown,
+    imgAlt: "",
+    link: "/team/member",
+  },
+  {
+    name: "Desconhecido",
+    imgSrc: unknown,
+    imgAlt: "",
+    link: "/team/member",
+  },
+  {
+    name: "Desconhecido",
+    imgSrc: unknown,
     imgAlt: "",
     link: "/team/member",
   },
   {
     name: "John Doe",
-    imgSrc: pic,
+    imgSrc: unknown,
     imgAlt: "",
     link: "/team/member",
   },
   {
-    name: "John Doe",
-    imgSrc: pic,
+    name: "Desconhecido",
+    imgSrc: unknown,
     imgAlt: "",
     link: "/team/member",
   },
   {
-    name: "John Doe",
-    imgSrc: pic,
-    imgAlt: "",
-    link: "/team/member",
-  },
-  {
-    name: "John Doe",
-    imgSrc: pic,
-    imgAlt: "",
-    link: "/team/member",
-  },
-  {
-    name: "John Doe",
-    imgSrc: pic,
-    imgAlt: "",
-    link: "/team/member",
-  },
-  {
-    name: "John Doe",
-    imgSrc: pic,
-    imgAlt: "",
-    link: "/team/member",
-  },
-  {
-    name: "John Doe",
-    imgSrc: pic,
-    imgAlt: "",
-    link: "/team/member",
-  },
-  {
-    name: "John Doe",
-    imgSrc: pic,
+    name: "Desconhecido",
+    imgSrc: unknown,
     imgAlt: "",
     link: "/team/member",
   },

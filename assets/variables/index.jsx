@@ -87,9 +87,9 @@ export const TextSmall = styled.p`
   }
 `;
 
-export const SectionContainer = styled.div`
+export const HeaderContainer = styled.header`
   position: relative;
-  height: 100vh;
+  height: ${(props) => props.height};
   width: 100%;
   display: flex;
   flex-direction: column;

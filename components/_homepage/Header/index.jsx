@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 import { TitleBig } from "../../../assets/variables/typography";
-import { SectionContainer } from "../../../assets/variables";
+import { HeaderContainer } from "../../../assets/variables";
 import { header } from "../../../assets/data/home";
 
 export default function Header() {
   return (
-    <SectionContainer image={header.image}>
+    <HeaderContainer image={header.image} height='100vh'>
       <Slogan>{header.slogan}</Slogan>
       <TitleBig>{header.title}</TitleBig>
-    </SectionContainer>
+    </HeaderContainer>
   );
 }
 

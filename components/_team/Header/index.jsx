@@ -2,17 +2,17 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import { TitleBig } from "../../../assets/variables/typography";
-import { SectionContainer } from "../../../assets/variables";
+import { HeaderContainer } from "../../../assets/variables";
 import { header } from "../../../assets/data/members";
 
 export default function Header() {
   return (
-    <SectionContainer image={header.image}>
+    <HeaderContainer image={header.image} height='100vh'>
       <ImageWrapper>
         <Image src={header.logo} alt="logo left bastards" />
       </ImageWrapper>
       <TitleBig>{header.title}</TitleBig>
-    </SectionContainer>
+    </HeaderContainer>
   );
 }
 

@@ -45,4 +45,9 @@ const FoundersWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 1rem;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;

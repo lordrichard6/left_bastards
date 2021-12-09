@@ -1,6 +1,13 @@
 import boss_01 from "../../public/images/team/boss_04.jpg";
 import goncalo_01 from "../../public/images/team/goncalo_01.jpg";
 import pedro_01 from "../../public/images/team/pedro_01.jpg";
+import anaisa_01 from "../../public/images/team/anaisa_01.jpg";
+import anaisa_car from "../../public/images/team/anaisa_car.jpg";
+import nuno_01 from "../../public/images/team/nuno_01.jpg";
+import nuno_car from "../../public/images/team/nuno_car.jpg";
+import nuno_header from "../../public/images/team/nuno_header.jpg";
+import angelo_01 from "../../public/images/team/angelo_01.jpg";
+import angelo_header from "../../public/images/team/angelo_header.jpg";
 import header01 from "../../public/images/home_04.jpg";
 import unknown from '../../public/images/unknown.jpg'
 
@@ -22,7 +29,7 @@ export const members = [
     slug: "paulo_reizinho",
     imgSrc: boss_01,
     imgAlt: "paulo reizinho",
-    carImg: "/images/home_04.jpg",
+    header: "/images/home_04.jpg",
     id_origin: "Alentejo",
     id_age: "35",
     id_living: "Zurich",
@@ -39,7 +46,7 @@ export const members = [
     slug: "goncalo_pinto",
     imgSrc: goncalo_01,
     imgAlt: "gonçalo pinto",
-    carImg: header01,
+    header: '/images/home_04.jpg',
     id_origin: "",
     id_age: "",
     id_living: "",
@@ -56,7 +63,7 @@ export const members = [
     slug: "pedro_ribeiro",
     imgSrc: pedro_01,
     imgAlt: "pedro ribeiro",
-    carImg: header01,
+    header: '/images/home_04.jpg',
     id_origin: "",
     id_age: "",
     id_living: "",
@@ -69,18 +76,52 @@ export const members = [
     facebook: ''
   },
   {
-    name: "alguem",
-    slug: "alguem",
-    imgSrc: unknown,
-    imgAlt: "unknown",
-    carImg: header01,
+    name: "Anaisa Campos",
+    slug: "anaisa",
+    imgSrc: anaisa_01,
+    imgAlt: "anaisa campos",
+    header: '/images/team/anaisa_header.jpg',
     id_origin: "",
     id_age: "",
     id_living: "",
     id_hobbies: "",
-    about_imgSrc: unknown,
+    about_imgSrc: anaisa_01,
     about_imgAlt: "",
-    car_imgSrc: header01,
+    car_imgSrc: anaisa_car,
+    car_imgAlt: "",
+    instagram: '',
+    facebook: ''
+  },
+  {
+    name: "Nuno Campos",
+    slug: "nuno",
+    imgSrc: nuno_01,
+    imgAlt: "nuno campos",
+    header: '/images/team/nuno_header.jpg',
+    id_origin: "",
+    id_age: "",
+    id_living: "",
+    id_hobbies: "",
+    about_imgSrc: nuno_01,
+    about_imgAlt: "",
+    car_imgSrc: nuno_car,
+    car_imgAlt: "",
+    instagram: '',
+    facebook: ''
+  },
+  {
+    name: "Angelo Ribeiro",
+    slug: "angelo",
+    imgSrc: angelo_01,
+    imgAlt: "angelo campos",
+    header: '/images/team/angelo_header.jpg',
+    id_origin: "",
+    id_age: "",
+    id_living: "",
+    id_hobbies: "",
+    about_imgSrc: angelo_01,
+    about_imgAlt: "",
+    car_imgSrc: angelo_header,
     car_imgAlt: "",
     instagram: '',
     facebook: ''

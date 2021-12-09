@@ -5,9 +5,9 @@ import { Colors } from "../../../assets/variables";
 import { TitleBig } from "../../../assets/variables/typography";
 import { HeaderContainer } from "../../../assets/variables";
 
-export default function Header({ carImg, imgSrc, imgAlt, name }) {
+export default function Header({ header, imgSrc, imgAlt, name }) {
   return (
-    <HeaderContainer image={carImg} height="50vh">
+    <HeaderContainer image={header} height="80vh">
       <ImageWrapper>
         <Image
           src={imgSrc}

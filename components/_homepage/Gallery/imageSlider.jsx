@@ -32,7 +32,7 @@ export default function ImageSlider({ slides }) {
             className={i === current ? "slide active" : "slide"}
           >
             {i === current && (
-              <Image src={item.imgSrc} alt={item.alt} objectFit="cover" />
+              <Image src={item.imgSrc} alt={item.alt} objectFit="cover"/>
             )}
           </ImageWrapper>
         );
@@ -49,7 +49,7 @@ const GalleryWrapper = styled.div`
   align-items: center;
 
   @media only screen and (max-width: 1024px) {
-    width: 100%;
+    width: 90vw;
   }
 
   @media only screen and (min-width: 2024px) {

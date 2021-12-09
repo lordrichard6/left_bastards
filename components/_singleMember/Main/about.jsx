@@ -1,27 +1,30 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { members } from "../../../assets/data/members";
 import { Colors } from "../../../assets/variables";
+import {
+  TextNormal,
+  TitleSecondary,
+} from "../../../assets/variables/typography";
 
-export default function About({imgSrc, imgAlt}) {
+export default function About({ about_imgSrc, about_imgAlt }) {
   return (
     <Container>
       <LeftWrapper>
-        <h1>Sobre Mim</h1>
-        <p>
+        <TitleSecondary>Sobre Mim</TitleSecondary>
+        <TextNormal>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, quos!
           Sed aperiam perspiciatis culpa commodi iure? Cumque porro maiores quas
           esse dolorum atque suscipit quam, libero accusamus? Illum, ex nisi.{" "}
-        </p>
+        </TextNormal>
       </LeftWrapper>
       <RightWrapper>
         <ImageWrapper>
           <Image
-            src={imgSrc}
+            src={about_imgSrc}
             objectFit="cover"
             objectPosition="center"
-            alt={imgAlt}
+            alt={about_imgAlt}
           />
         </ImageWrapper>
       </RightWrapper>
@@ -33,6 +36,14 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin: 2rem 0;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+
+  @media only screen and (min-width: 2024px) {
+    width: 60%;
+  }
 `;
 
 const LeftWrapper = styled.div`
@@ -43,10 +54,9 @@ const LeftWrapper = styled.div`
   align-items: center;
   margin-right: 10px;
 
-  h1 {
+  @media screen and (max-width: 768px) {
     width: 100%;
-    font-size: 2.5rem;
-    text-transform: uppercase;
+    margin-right: 0;
   }
 `;
 
@@ -54,6 +64,10 @@ const RightWrapper = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -63,4 +77,12 @@ const ImageWrapper = styled.div`
   border: 2px solid ${Colors.primary};
   border-radius: 4px;
   margin-left: 10px;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+  }
+
+  @media only screen and (min-width: 2024px) {
+    height: 30rem;
+  }
 `;

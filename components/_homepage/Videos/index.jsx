@@ -19,11 +19,11 @@ export default function Videos() {
   return (
     <SectionContainer>
       <InnerContainer>
-        <TitleSectionAlt>
+        <TitleSection>
           {data.title.split("").map((item, i) => {
             return <h1 key={i}>{item}</h1>;
           })}
-        </TitleSectionAlt>
+        </TitleSection>
         <TextWrapper>
           <TextNormal>{data.quote}</TextNormal>
         </TextWrapper>
@@ -75,15 +75,6 @@ const InnerContainer = styled.div`
   align-items: center;
 `;
 
-const TitleSectionAlt = styled(TitleSection)`
-  h1 {
-    &:nth-child(3),
-    &:nth-child(7) {
-      color: ${Colors.primary};
-    }
-  }
-`;
-
 const TextWrapper = styled.div`
   width: 100%;
   text-align: center;
@@ -96,6 +87,7 @@ const VideoWrapper = styled.div`
   height: 35rem;
 
   @media only screen and (max-width: 764px) {
+    width: 90vw!important;
     height: 25rem;
   }
 

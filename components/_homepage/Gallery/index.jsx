@@ -9,11 +9,11 @@ export default function Gallery() {
   return (
     <SectionContainer>
       <InnerContainer>
-        <TitleSectionAlt>
+        <TitleSection>
           {gallery.title.split("").map((item, i) => {
             return <h1 key={i}>{item}</h1>;
           })}
-        </TitleSectionAlt>
+        </TitleSection>
         <TextWrapper>
           <TextNormal>Lorme tellus, ac nunc accumsan dolor sit ultricies.</TextNormal>
         </TextWrapper>
@@ -44,16 +44,6 @@ const InnerContainer = styled.div`
 
   @media only screen and (min-width: 2024px) {
     width: 60%;
-  }
-`;
-
-const TitleSectionAlt = styled(TitleSection)`
-  h1 {
-    &:nth-child(3),
-    &:nth-child(4),
-    &:nth-child(8) {
-      color: #caa82f;
-    }
   }
 `;
 

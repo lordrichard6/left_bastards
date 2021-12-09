@@ -30,9 +30,14 @@ const CardWrapper = styled.div`
   border: 2px solid ${Colors.primary};
   border-radius: 4px;
   cursor: pointer;
-  height: 35rem;
+  height: 30rem;
   width: 20rem;
   overflow: hidden;
+
+  @media only screen and (min-width: 2024px) {
+    height: 35rem;
+    width: 25rem;
+  }
 
   .text {
     position: absolute;

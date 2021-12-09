@@ -8,11 +8,11 @@ import { TitleSection, TextNormal } from "../../../assets/variables/typography";
 export default function Right() {
   return (
     <RightContainer>
-      <TitleSectionAlt>
+      <TitleSection>
         {about.title.split("").map((item, i) => {
           return <h1 key={i}>{item}</h1>;
         })}
-      </TitleSectionAlt>
+      </TitleSection>
       <TextWrapper>
         <TextNormal>{about.text}</TextNormal>
       </TextWrapper>
@@ -47,25 +47,6 @@ const RightContainer = styled.div`
   }
 `;
 
-const TitleSectionAlt = styled(TitleSection)`
-  width: 80%;
-
-  @media screen and (max-width: 768px) {
-    justify-content: center;
-  }
-
-  h1 {
-    &:nth-child(5) {
-      margin-right: 1rem;
-    }
-    &:nth-child(3),
-    &:nth-child(6),
-    &:nth-child(8) {
-      color: #caa82f;
-    }
-  }
-`;
-
 const TextWrapper = styled.div`
   width: 80%;
 
@@ -87,8 +68,10 @@ const IconWrapper = styled.div`
   svg {
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    filter: drop-shadow(0.15rem 0.15rem 0.2rem rgba(0, 0, 0, 0.5));
 
     &:hover {
+      filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(${Colors.dark}, 0.5);
       z-index: 20;

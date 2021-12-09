@@ -106,6 +106,7 @@ export const HeaderContainer = styled.header`
 
   @media only screen and (max-width: 768px) {
     height: 50rem;
+    background-position: center;
   }
 `;
 

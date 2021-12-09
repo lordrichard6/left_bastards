@@ -22,7 +22,7 @@ export const header = {
 };
 
 export const about = {
-  title: "sobrenos.",
+  title: "sobre nos.",
   text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper sed duis tristique mattis mauris, vitae non adipiscing. 
     
     Faucibus sem rhoncus amet aliquet feugiat. Et tincidunt molestie turpis ac sed. Tortor nulla tincidunt ultricies bibendum sit pulvinar eu congue. Aliquet elementum adipiscing dui porttitor varius. 
@@ -87,7 +87,7 @@ export const galleryPictures = [
 ];
 
 export const sponsorTitle = {
-  title: "os nossos patrocinios.",
+  title: "patrocinios.",
   quote: "Our friends are precious",
 };
 

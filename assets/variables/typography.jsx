@@ -60,7 +60,12 @@ export const TitleSection = styled.div`
     letter-spacing: 4px;
     margin-bottom: 1rem;
     text-transform: uppercase;
-    white-space: pre-line;
+    white-space: pre-wrap;
+    text-shadow: 1px 2px 3px #00000081;
+
+    &:nth-child(3n) {
+      color: ${Colors.primary};
+    }
 
     @media screen and (max-width: 768px) {
       font-size: 2rem;
@@ -70,6 +75,20 @@ export const TitleSection = styled.div`
       font-size: 3rem;
       font-weight: 500;
     }
+  }
+`;
+
+export const TitleSecondary = styled.h2`
+  width: 100%;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    /* font-size: 1rem; */
+  }
+
+  @media only screen and (min-width: 2024px) {
+    font-size: 3.5rem;
   }
 `;
 

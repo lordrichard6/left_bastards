@@ -4,11 +4,9 @@ import { Colors } from "../../../assets/variables";
 import { TextNormal } from "../../../assets/variables/typography";
 import Card from "./card";
 
-export default function Group({ title, quote, data }) {
+export default function Group({ data }) {
   return (
     <SectionContainer>
-      <TeamTitle>{title}</TeamTitle>
-      <TextNormal>{quote}</TextNormal>
       <FoundersWrapper>
         {data.map((item, i) => {
           return (
@@ -33,13 +31,6 @@ const SectionContainer = styled.div`
   align-items: center;
 `;
 
-const TeamTitle = styled.h1`
-  color: ${Colors.primary};
-  font-weight: 400;
-  letter-spacing: 6px;
-  margin-bottom: 0.5rem;
-`;
-
 const FoundersWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -49,5 +40,9 @@ const FoundersWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
+  }
+
+  @media only screen and (min-width: 2024px) {
+    grid-template-columns: repeat(4, 1fr);
   }
 `;

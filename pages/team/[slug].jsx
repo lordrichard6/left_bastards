@@ -33,7 +33,7 @@ export default function SingleMember({ ...data}) {
       <SectionContainer>
         <Id {...data} />
         <About {...data} />
-        {/* <Car /> */}
+        <Car {...data} />
         {/* <Gallery /> */}
       </SectionContainer>
     </>

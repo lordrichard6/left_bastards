@@ -9,11 +9,11 @@ export default function Sponsors() {
   return (
     <SectionContainer>
       <InnerContainer>
-        <TitleSectionAlt>
+        <TitleSection>
           {sponsorTitle.title.split("").map((item, i) => {
             return <h1 key={i}>{item}</h1>;
           })}
-        </TitleSectionAlt>
+        </TitleSection>
         <TextWrapper>
           <TextNormal>{sponsorTitle.quote}</TextNormal>
         </TextWrapper>
@@ -55,20 +55,6 @@ const InnerContainer = styled.div`
   }
 `;
 
-const TitleSectionAlt = styled(TitleSection)`
-  h1 {
-    &:nth-child(3),
-    &:nth-child(6),
-    &:nth-child(9),
-    &:nth-child(12) {
-      color: ${Colors.primary};
-    }
-    &:nth-child(4) {
-      margin-left: 1rem;
-    }
-  }
-`;
-
 const TextWrapper = styled.div`
   width: 100%;
   text-align: center;
@@ -97,6 +83,7 @@ const Sponsor = styled.div`
   height: auto;
   transition: 0.3s ease-in-out;
   cursor: pointer;
+  filter: drop-shadow(0.15rem 0.15rem 0.2rem rgba(85, 85, 85, 0.5));
 
   @media only screen and (max-width: 764px) {
     margin: 1rem 0;
@@ -107,6 +94,7 @@ const Sponsor = styled.div`
   }
 
   &:hover {
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(85, 85, 85, 0.5));
     transform: scale(1.05) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba(${Colors.dark}, 0.5);
     z-index: 20;

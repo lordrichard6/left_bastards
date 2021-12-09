@@ -63,7 +63,7 @@ const SectionContainer = styled.div`
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.8)
     ),
-    url("/images/header.jpg");
+    url("/images/home/home_videos.jpg");
   background-size: cover;
 `;
 

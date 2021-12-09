@@ -31,6 +31,8 @@ export const members = [
     about_imgAlt: "paulo reizinho",
     car_imgSrc: header01,
     car_imgAlt: "car",
+    instagram: '',
+    facebook: ''
   },
   {
     name: "Gonçalo Pinto",
@@ -46,6 +48,8 @@ export const members = [
     about_imgAlt: "",
     car_imgSrc: header01,
     car_imgAlt: "car",
+    instagram: '',
+    facebook: ''
   },
   {
     name: "Pedro Ribeiro",
@@ -61,6 +65,8 @@ export const members = [
     about_imgAlt: "",
     car_imgSrc: header01,
     car_imgAlt: "",
+    instagram: '',
+    facebook: ''
   },
   {
     name: "alguem",
@@ -76,5 +82,7 @@ export const members = [
     about_imgAlt: "",
     car_imgSrc: header01,
     car_imgAlt: "",
+    instagram: '',
+    facebook: ''
   },
 ];

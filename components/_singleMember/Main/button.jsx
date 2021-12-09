@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 import { Colors } from "../../../assets/variables";
 
@@ -6,9 +7,9 @@ export default function Button({ icon, link }) {
   return (
     <Container>
       Follow
-      <a href={link} class="icon">
-        {icon}
-      </a>
+      <Link href="">
+        <a className="icon">{icon}</a>
+      </Link>
     </Container>
   );
 }

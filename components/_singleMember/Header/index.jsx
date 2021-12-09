@@ -4,22 +4,21 @@ import Image from "next/image";
 import { Colors } from "../../../assets/variables";
 import { TitleBig } from "../../../assets/variables/typography";
 import { HeaderContainer } from "../../../assets/variables";
-import { members } from "../../../assets/data/members";
 
-export default function Header() {
+export default function Header({carImg, imgSrc, imgAlt, name}) {
   return (
-    <HeaderContainer image={members[0].carImg} height='40rem'>
+    <HeaderContainer image={carImg} height='30rem'>
       <ImageWrapper>
         <Image
-          src={members[0].imgSrc}
+          src={imgSrc}
           layout="fill"
           objectPosition="center"
           objectFit="cover"
-          alt={members[0].imgAlt}
+          alt={imgAlt}
         />
       </ImageWrapper>
     <TitleWrapper>
-      <TitleBig>{members[0].name}</TitleBig>
+      <TitleBig>{name}</TitleBig>
     </TitleWrapper>
       
     </HeaderContainer>
@@ -28,13 +27,13 @@ export default function Header() {
 
 const ImageWrapper = styled.div`
   position: absolute;
-  width: 30rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   bottom: 0;
   left: 0;
   border-radius: 1000px;
   border: 10px solid ${Colors.dark};
-  transform: translate(40%, 50%);
+  transform: translate(50%, 50%);
   z-index: 30;
 
   img {
@@ -51,5 +50,6 @@ const TitleWrapper = styled.div`
   margin-right: 10rem;
   h1 {
     letter-spacing: 4px;
+    font-size: 3rem;
   }
 `;

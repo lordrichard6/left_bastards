@@ -14,7 +14,7 @@ export default function Group({ title, quote, data }) {
           return (
             <Card
               key={i}
-              link={item.link}
+              link={`/team/${item.slug}`}
               imgSrc={item.imgSrc}
               imgAlt={item.imgAlt}
               name={item.name}

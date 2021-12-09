@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { Colors } from "../../../assets/variables";
-import { founders, members, page } from "../../../assets/data/members";
+import { members, page } from "../../../assets/data/members";
 import Group from "./group";
 
 export default function Team() {
@@ -16,7 +16,7 @@ export default function Team() {
         <TextWrapper>
           <p>{page.quote}</p>
         </TextWrapper>
-        <Group title={page.group_01} quote={page.quote_01} data={founders} />
+        {/* <Group title={page.group_01} quote={page.quote_01} data={founders} /> */}
         <Group title={page.group_02} quote={page.quote_02} data={members} />
       </InnerContainer>
     </SectionContainer>
